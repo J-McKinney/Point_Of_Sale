@@ -1,12 +1,11 @@
-import React, { Component } from "react";
+import React from 'react';
 
-class NumberPad extends Component {
-  render() {
+function NumberPad(props) {
     return (
-      <div>
-      </div>
+        <div>
+            
+        </div>
     );
-  }
 }
 
 export default NumberPad;
