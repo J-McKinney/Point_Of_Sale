@@ -1,10 +1,8 @@
 import React from "react";
-import NumberPad from "../../Components/NumberPad";
 
-function LoginPage(props) {
+function LoginPage() {
   return (
     <div>
-      <NumberPad />
     </div>
   );
 }
