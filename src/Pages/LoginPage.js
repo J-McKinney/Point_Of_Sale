@@ -4,6 +4,7 @@ import KeyBoard from "../Components/KeyBoard";
 import Keyboard from "react-simple-keyboard";
 
 class LoginPage extends Component {
+  state = {};
   render() {
     return (
       <>
