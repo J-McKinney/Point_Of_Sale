@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
 import Keyboard from "react-simple-keyboard";
 import "./style.css";
 
@@ -38,21 +35,17 @@ class KeyBoard extends Component {
   render() {
     return (
       <>
-        <Container id="keyBoardContainer">
-          <Row id="keyBoardRow">
-            <input
-              value={this.state.input}
-              placeholder={"Tap on the virtual keyboard to start"}
-              onChange={this.onChangeInput}
-            />
-            <Keyboard
-              keyboardRef={(r) => (this.keyboard = r)}
-              layoutName={this.state.layoutName}
-              onChange={this.onChange}
-              onKeyPress={this.onKeyPress}
-            />
-          </Row>
-        </Container>
+        <input
+          value={this.state.input}
+          placeholder={"Tap on the virtual keyboard to start"}
+          onChange={this.onChangeInput}
+        />
+        <Keyboard
+          keyboardRef={(r) => (this.keyboard = r)}
+          layoutName={this.state.layoutName}
+          onChange={this.onChange}
+          onKeyPress={this.onKeyPress}
+        />
       </>
     );
   }
