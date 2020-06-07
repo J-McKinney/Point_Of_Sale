@@ -3,9 +3,8 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 // import Col from "react-bootstrap/Col";
-import Keyboard from "react-simple-keyboard";
 
-function Keys(props) {
+function KeyBoard(props) {
   return (
     <div>
       <Container id="keyBoardContainer">
@@ -94,9 +93,8 @@ function Keys(props) {
           </Button>
         </Row>
       </Container>
-      <Keyboard />
     </div>
   );
 }
 
-export default Keys;
+export default KeyBoard;
