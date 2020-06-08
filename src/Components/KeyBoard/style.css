@@ -41,6 +41,7 @@ input {
   font-family: HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue,
     Helvetica, Arial, Lucida Grande, sans-serif;
   background-color: #ececec;
+  /* color between each button */
   padding: 5px;
   border-radius: 5px;
 }
@@ -48,19 +49,23 @@ input {
 .hg-theme-default .hg-button {
   display: inline-block;
   flex-grow: 1;
+  /* allows buttons to grow and fill in the keyboard */
 }
 
 .hg-theme-default .hg-row {
   display: flex;
+  /* flex display for each button */
 }
 
 .hg-theme-default .hg-row:not(:last-child) {
   margin-bottom: 5px;
+  /* height between each button */
 }
 
 .hg-theme-default .hg-row .hg-button-container,
 .hg-theme-default .hg-row .hg-button:not(:last-child) {
   margin-right: 5px;
+  /* width between each button */
 }
 
 .hg-theme-default .hg-row > div:last-child {
@@ -77,17 +82,18 @@ input {
   border-radius: 5px;
   box-sizing: border-box;
   padding: 5px;
-  background: #fff;
-  border-bottom: 1px solid #b5b5b5;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: #fff; /* background color of each individual key */
+  border-bottom: 1px solid #b5b5b5; /* border color of each button */
+  cursor: pointer; /* default pointer is finger-pointer */
+  display: flex; /* centers the letter/number/word on each key */
+  align-items: center; /* centers the letter/number/word on each key */
+  justify-content: center; /* centers the letter/number/word on each key */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .hg-theme-default .hg-button.hg-activeButton {
-  background: #efefef;
+  background: #efefef; 
+  /* makes eack key flash when clicked on */
 }
 
 .hg-theme-default.hg-layout-numeric .hg-button {
@@ -126,4 +132,33 @@ input {
 
 .hg-theme-default .hg-button.hg-standardBtn[data-skbtn="@"] {
   max-width: 60px;
+}
+
+
+
+/* Dark Theme Mode */
+
+.simple-keyboard.myTheme1 {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.simple-keyboard.myTheme1 .hg-button {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.simple-keyboard.myTheme1 .hg-button:active {
+  background: #1c4995;
+  color: white;
+}
+
+#root .simple-keyboard.myTheme1 + .simple-keyboard-preview {
+  background: #1c4995;
 }

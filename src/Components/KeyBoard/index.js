@@ -37,11 +37,12 @@ class KeyBoard extends Component {
       <>
         <input
           value={this.state.input}
-          placeholder={"Tap on the virtual keyboard to start"}
+          placeholder={"Login Identification"}
           onChange={this.onChangeInput}
         />
         <Keyboard
           keyboardRef={(r) => (this.keyboard = r)}
+          theme={"hg-theme-default myTheme1"} // This is the dark theme mode
           layoutName={this.state.layoutName}
           onChange={this.onChange}
           onKeyPress={this.onKeyPress}
