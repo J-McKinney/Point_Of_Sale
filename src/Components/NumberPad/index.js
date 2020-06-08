@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./style.css";
 
-function NumberPad(props) {
+function NumberPad() {
   return (
     <div>
       <Container id="numberPadContainer">

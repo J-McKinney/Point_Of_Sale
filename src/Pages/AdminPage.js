@@ -4,7 +4,7 @@ class AdminPage extends Component {
     render() {
         return (
             <div>
-                
+                Hello Again World
             </div>
         );
     }
