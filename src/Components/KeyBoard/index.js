@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Keyboard from "react-simple-keyboard";
+// import { Link } from "react-router-dom";
 import "./style.css";
 
 class KeyBoard extends Component {
@@ -17,6 +18,10 @@ class KeyBoard extends Component {
     console.log("Button pressed", button);
     // If you want to handle the shift and caps lock buttons
     if (button === "{shift}" || button === "{lock}") this.handleShift();
+    // need to get the {enter} button to log in users with authentication
+    if (button === "{enter}") {
+      alert("Enter Button Pressed");
+    }
   };
 
   handleShift = () => {
