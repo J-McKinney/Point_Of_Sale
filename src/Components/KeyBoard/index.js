@@ -9,6 +9,10 @@ class KeyBoard extends Component {
     input: "",
   };
 
+  componentDidUpdate() {
+    // console.log("componentDidUpdate: " + this.state.input);
+  }
+
   onChange = (input) => {
     this.setState({ input });
     console.log("Input changed", input);
@@ -20,7 +24,7 @@ class KeyBoard extends Component {
     if (button === "{shift}" || button === "{lock}") this.handleShift();
     // need to get the {enter} button to log in users with authentication
     if (button === "{enter}") {
-      alert("Enter Button Pressed");
+      alert("You entered: " + this.state.input);
     }
   };
 
