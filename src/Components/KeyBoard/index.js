@@ -24,7 +24,7 @@ class KeyBoard extends Component {
     // If you want to handle the shift and caps lock buttons
     if (button === "{shift}" || button === "{lock}") this.handleShift();
     // need to get the {enter} button to log in users with authentication
-    if (button === "{enter}") this.enteredInput();
+    if (button === "{enter}") this.userEnteredInput();
   };
 
   handleShift = () => {
@@ -40,7 +40,7 @@ class KeyBoard extends Component {
     this.keyboard.setInput(input);
   };
 
-  enteredInput = () => {
+  userEnteredInput = () => {
     // Using the getInput Method to get the input
     let input = this.keyboard.getInput();
     console.log("entered input: " + input);
