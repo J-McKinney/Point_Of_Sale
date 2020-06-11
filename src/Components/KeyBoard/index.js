@@ -7,7 +7,7 @@ class KeyBoard extends Component {
   state = {
     layoutName: "default",
     input: "",
-    loginID: "",
+    // loginID: "",
   };
 
   componentDidUpdate() {
@@ -20,11 +20,11 @@ class KeyBoard extends Component {
   };
 
   onKeyPress = (button) => {
-    // console.log("Button pressed: ", button);
+    console.log("Button pressed: ", button);
     // If you want to handle the shift and caps lock buttons
     if (button === "{shift}" || button === "{lock}") this.handleShift();
     // need to get the {enter} button to log in users with authentication
-    if (button === "{enter}") this.loginCreds();
+    // if (button === "{enter}") this.loginCreds();
   };
 
   handleShift = () => {
@@ -40,14 +40,14 @@ class KeyBoard extends Component {
     this.keyboard.setInput(input);
   };
 
-  loginCreds = () => {
-    // Using the getInput Method to get the input
-    let input = this.keyboard.getInput();
-    console.log("LoginCreds: " + input);
-    // setting the state of LoginID to the input for credential authorization
-    this.setState({ loginID: this.state.input });
-    this.keyboard.clearInput();
-  };
+  // loginCreds = () => {
+  //   // Using the getInput Method to get the input
+  //   let input = this.keyboard.getInput();
+  //   console.log("LoginCreds: " + input);
+  //   // setting the state of LoginID to the input for credential authorization
+  //   this.setState({ loginID: this.state.input });
+  //   this.keyboard.clearInput();
+  // };
 
   render() {
     return (
